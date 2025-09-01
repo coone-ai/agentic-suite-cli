@@ -83,12 +83,6 @@ Desteklenen dosya formatları:
 - JSON (.json)
 - Excel (.xlsx, .xls)
 
-Dosya içeriği şunları içermelidir:
-- Ürün bilgileri (isim, açıklama, özellikler)
-- Müşteri tercihleri
-- Hedef kitle bilgileri
-- SEO anahtar kelimeleri
-
 5. SONUÇ TAKİBİ
 ---------------
 - Yüklenen dosyaların işlenme durumunu takip edin

@@ -83,12 +83,6 @@ Supported file formats:
 - JSON (.json)
 - Excel (.xlsx, .xls)
 
-File content should include:
-- Product information (name, description, features)
-- Customer preferences
-- Target audience information
-- SEO keywords
-
 5. RESULT TRACKING
 ------------------
 - Track the processing status of uploaded files
