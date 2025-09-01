@@ -1,0 +1,170 @@
+AI AGENT API - KULLANIM KILAVUZU
+=====================================
+
+GEREKSİNİMLER
+-------------
+- Python 3.6 veya üzeri
+- İnternet bağlantısı
+- Geçerli kullanıcı hesabı
+
+KURULUM
+-------
+1. Programı bilgisayarınıza indirin
+2. Terminal/Komut İstemcisini açın
+3. Program klasörüne gidin
+
+KULLANIM ŞEKİLLERİ
+==================
+
+1. İNTERAKTİF MOD (Önerilen - İlk kullanım için)
+-------------------------------------------------
+Programı hiçbir parametre olmadan çalıştırın:
+   python main.py
+
+Bu mod size adım adım rehberlik eder:
+- E-posta ve şifre ile giriş yapın
+- Agent (ajan) seçin veya yeni oluşturun
+- Session (oturum) seçin veya yeni oluşturun
+- Dosya yükleyin
+- Sonuçları takip edin
+
+2. HIZLI YÜKLEME MODU
+---------------------
+Dosyanızı hızlıca yüklemek için:
+   python main.py "email" "sifre" [dosya_yolu] [agent_adi] [session_id]
+
+Örnekler:
+   # Sadece giriş bilgileri (dosya, agent ve session interaktif seçilir)
+   python main.py "user@example.com" "mypassword"
+   
+   # Dosya yolu belirtilmiş (agent ve session interaktif seçilir)
+   python main.py "user@example.com" "mypassword" "/path/to/data.csv"
+   
+   # Agent adı belirtilmiş (session interaktif seçilir)
+   python main.py "user@example.com" "mypassword" "/path/to/data.csv" "myagent"
+   
+   # Hem agent hem session belirtilmiş
+   python main.py "user@example.com" "mypassword" "/path/to/data.csv" "myagent" "FySHPoH0TIMHVB7Hw8tl"
+
+ADIM ADIM KULLANIM
+==================
+
+1. GİRİŞ YAPMA
+--------------
+- E-posta adresinizi girin
+- Şifrenizi girin (güvenlik için yıldız olarak görünür)
+
+2. AGENT YÖNETİMİ
+-----------------
+Agent, AI hizmetlerini kullanacağınız sanal çalışma alanıdır.
+
+Seçenekler:
+- Mevcut agent'ları görüntüleme
+- Yeni agent oluşturma
+- Agent değiştirme
+
+3. SESSION YÖNETİMİ
+-------------------
+Session, belirli bir görev için oluşturulan çalışma oturumudur.
+
+Mevcut görevler:
+1) Product Description Writer (Ürün Açıklaması Yazıcı)
+   - Müşteri verilerini kullanarak yapılandırılmış ve etkileyici ürün açıklamaları oluşturur
+   - SEO uyumlu ve kişiselleştirilmiş içerik üretir
+
+2) Product Title Writer (Ürün Başlığı Yazıcı)
+   - Anahtar kelime açısından zengin, net ve SEO optimizasyonlu ürün başlıkları oluşturur
+   - Pazaryeri görünürlüğü ve arama sıralaması için optimize edilir
+
+4. DOSYA YÜKLEME
+----------------
+Desteklenen dosya formatları:
+- CSV (.csv)
+- JSON (.json)
+- Excel (.xlsx, .xls)
+
+Dosya içeriği şunları içermelidir:
+- Ürün bilgileri (isim, açıklama, özellikler)
+- Müşteri tercihleri
+- Hedef kitle bilgileri
+- SEO anahtar kelimeleri
+
+5. SONUÇ TAKİBİ
+---------------
+- Yüklenen dosyaların işlenme durumunu takip edin
+- İlerleme çubuğu ile işlem durumunu görün
+- Tamamlanan dosyaları indirin
+
+MENÜ SEÇENEKLERİ
+================
+1) Select Agent - Agent seç
+2) Create New Agent - Yeni agent oluştur
+3) Select Session - Session seç
+4) Create New Session - Yeni session oluştur
+5) Upload File to Session - Session'a dosya yükle
+6) View Result (Session Output) - Sonuçları görüntüle
+0) Exit - Çıkış
+
+ÖRNEK KULLANIM SENARYOLARI
+==========================
+
+SENARYO 1: İlk Kez Kullanım
+---------------------------
+1. python main.py
+2. E-posta ve şifre ile giriş yap
+3. "Create New Agent" seç (2)
+4. Agent adı gir (örn: "E-ticaret Mağazam")
+5. "Create New Session" seç (4)
+6. Görev seç (1 veya 2)
+7. "Upload File to Session" seç (5)
+8. Dosya yolunu gir
+9. "View Result" seç (6) ile takip et
+
+SENARYO 2: Hızlı Yükleme
+------------------------
+1. python main.py "email" "sifre"
+2. Program dosya yolu, agent ve session seçimi için size soracak
+3. Seçimlerinizi yapın, dosya otomatik yüklenecek
+
+Alternatif: İstediğiniz parametreleri verebilirsiniz:
+   python main.py "email" "sifre" "dosya.csv"                    # Dosya belirtilmiş
+   python main.py "email" "sifre" "dosya.csv" "agent_adi"        # Agent da belirtilmiş
+   python main.py "email" "sifre" "dosya.csv" "agent_adi" "session_id"  # Hepsi belirtilmiş
+
+SORUN GİDERME
+=============
+
+Yaygın Sorunlar ve Çözümleri:
+
+1. "Login failed" hatası
+   - E-posta ve şifrenizi kontrol edin
+   - İnternet bağlantınızı kontrol edin
+
+2. "File does not exist" hatası
+   - Dosya yolunu kontrol edin
+   - Dosyanın gerçekten var olduğundan emin olun
+
+3. "Unsupported file format" hatası
+   - Sadece CSV, JSON, Excel dosyaları desteklenir
+   - Dosya uzantısını kontrol edin
+
+4. "Agent not found" hatası
+   - Agent adını doğru yazdığınızdan emin olun
+   - Büyük/küçük harf duyarlılığına dikkat edin
+
+5. "Session not found" hatası
+   - Session ID'sini kontrol edin
+   - Session'ın hala aktif olduğundan emin olun
+
+TEKNİK DESTEK
+=============
+Sorun yaşadığınızda:
+1. Hata mesajını not edin
+2. Kullandığınız komutu kaydedin
+3. Dosya formatını ve boyutunu belirtin
+4. Teknik destek ekibiyle iletişime geçin
+
+İLETİŞİM
+========
+Teknik destek ve sorularınız için:
+- E-posta: semih.durgun@co-one.co
