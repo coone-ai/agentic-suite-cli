@@ -121,9 +121,8 @@ def main():
                 return
             
             print(f"\nSessions for {agent_name}:")
-            from utils.helpers import print_sessions
             print_sessions(sessions)
-            
+
             try:
                 session_idx = int(input("Select session number: ")) - 1
                 if 0 <= session_idx < len(sessions):
